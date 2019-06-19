@@ -1,0 +1,9 @@
+1.Go to java bin folder, run following command in console
+keytool -genkeypair -alias <to_be_use_by_app> -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore <name_of_key>.p12 -validity 3650
+
+2.Copy the .p12 file into application's keystore folder at classpath
+
+3.Configure application.properties to allow springboot to runs ssl/tsl
+
+4.If you already have valid certificate, skip steps 1 & 2 (selfsigned certificate generation)
+
